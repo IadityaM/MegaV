@@ -162,7 +162,7 @@
       </div>
 
       <div class="pr1 py2 nowrap border-bottom travel-border-gray">
-        <span class="travel-badge" [class]="query_maxPrice < 801 ? 'travel-badge green' : 'travel-badge'" [text]="query_maxPrice < 801 ? 'Up to $' + round(query_maxPrice) : 'Any price'">Any price</span>
+        <span class="travel-badge" [class]="query_maxPrice < 801 ? 'travel-badge green' : 'travel-badge'" [text]="query_maxPrice < 801 ? 'Up to ₹' + round(query_maxPrice) : 'Any price'">Any price</span>
       </div>
 
       <div class="pl1 py2 nowrap border-bottom travel-border-gray flex-none">
@@ -289,8 +289,8 @@
     <div class="travel-filters-text h5 mb1 caps">max price</div>
 
 <!-- Price Selector -->
-<div class="h1" [text]="fields_maxPrice_live < 801 ? '$' + round(fields_maxPrice_live) : '$800+'">
-  $800+
+<div class="h1" [text]="fields_maxPrice_live < 801 ? '₹' + round(fields_maxPrice_live) : '₹800+'">
+  ₹800+
 </div>
 <!--
   This should be rendered with path data from the api but rendering SVG with
@@ -321,7 +321,7 @@
   '&sort=' + query_sort
 ">
         <template type="amp-mustache">
-          Average Price for activites in {{stats.location}} is between ${{stats.price.average.min}} and ${{stats.price.average.max}}.
+          Average Price for activites in {{stats.location}} is between ₹{{stats.price.average.min}} and ₹{{stats.price.average.max}}.
         </template>
       </amp-list>
     </div>
@@ -666,7 +666,7 @@
                 <div class="h2 line-height-2 mb1">
                   <span class="travel-results-result-text">{{name}}</span>
                   <span class="travel-results-result-subtext h3">&bull;</span>
-                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="bold">{{price.value}}</span>
+                  <span class="travel-results-result-subtext h3">₹&nbsp;</span><span class="bold">{{price.value}}</span>
                 </div>
                 <div class="h4 line-height-2">
                   <!--
