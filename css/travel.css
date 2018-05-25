@@ -2265,7 +2265,8 @@ amp-img.circle img {
 }
 
 .travel-input-big {
-  padding: 1rem 1.25rem
+  padding: 1rem 1.25rem;
+  border-color: hsla(0,0%,100%,.7)
 }
 
 .travel-input-dark {
